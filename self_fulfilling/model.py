@@ -5,15 +5,15 @@ from tqdm import tqdm
 
 class SF:
     def __init__(self, log_p_matrix):
-    """
-    Class to infer the distribution of autoregressive order process
-    
-    Arguments:
-        :np.ndarray log_p_matrix: matrix with precomputed log probability
+        """
+        Class to infer the distribution of autoregressive order process
+        
+        Arguments:
+            :np.ndarray log_p_matrix: matrix with precomputed log probability
 
-    Returns:
-        :SF: instance of SF class
-    """
+        Returns:
+            :SF: instance of SF class
+        """
         self.log_p_matrix = log_p_matrix
         self.P_max        = log_p_matrix.shape[0]
         self.tot_chunks   = log_p_matrix.shape[-1]
